@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chris D'Silva — Validation Scientist</title>
+<meta name="description" content="Equipment and site validation scientist at Hikma Pharmaceuticals. VHP, autoclave and isolator cycle development, temperature mapping, FDA audit response, and serialization line qualification.">
+<link rel="canonical" href="https://chrisd-7.github.io/ChrisDSilva/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a5fb4'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Chris D'Silva — Validation Scientist, Hikma Pharmaceuticals">
+<meta property="og:description" content="VHP, autoclave and isolator cycle development, temperature mapping, FDA audit response, and serialization line qualification.">
+<meta property="og:url" content="https://chrisd-7.github.io/ChrisDSilva/">
+<meta property="og:image" content="https://chrisd-7.github.io/ChrisDSilva/assets/site/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #fbfbfd;
+    --fg: #16181d;
+    --muted: #5f6368;
+    --line: #e7e8ea;
+    --accent: #1a5fb4;
+    --mark: #b3541e;
+    --radius: 14px;
+    --max: 62rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --card: #161920;
+      --fg: #e6e8ee;
+      --muted: #9aa3b2;
+      --line: #262b36;
+      --accent: #7fb3ff;
+      --mark: #ffb27a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ---------- top bar ---------- */
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 84%, transparent);
+    backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in { display: flex; align-items: center; gap: .75rem; height: 3.75rem; }
+  .bar img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+  .bar .nm { font-weight: 600; letter-spacing: -0.01em; }
+  .bar nav { margin-left: auto; display: flex; gap: 1.1rem; font-size: .94rem; }
+  .bar nav a { color: var(--muted); }
+  .bar nav a:hover { color: var(--fg); text-decoration: none; }
+  @media (max-width: 34rem) {
+    .bar .nm { display: none; }
+    .bar nav { gap: .9rem; margin-left: 0; }
+    .bar-in { justify-content: space-between; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 210px 1fr; gap: 2.25rem; align-items: center; padding: 3.5rem 0 2.5rem; }
+  .hero .shot img { width: 210px; height: 210px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+  .tag { color: var(--muted); font-size: 1.05rem; margin: 0 0 .9rem; }
+  .lede { margin: 0 0 1.4rem; max-width: 38rem; }
+  .btns { display: flex; flex-wrap: wrap; gap: .55rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .5rem .85rem; border: 1px solid var(--line); border-radius: 999px;
+    color: var(--fg); font-size: .93rem; background: var(--card);
+    transition: border-color .18s, transform .18s;
+  }
+  .btn:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-1px); }
+  .btn svg { width: 15px; height: 15px; fill: currentColor; opacity: .75; }
+  @media (max-width: 46rem) {
+    .hero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2.25rem; }
+    .hero .shot img { width: 130px; height: 130px; }
+  }
+
+  /* ---------- sections ---------- */
+  h2 { font-size: 1.35rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 .35rem; }
+  .sub { color: var(--muted); font-size: .95rem; margin: 0 0 1.5rem; }
+  section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+
+  /* ---------- work grid ---------- */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+  @media (max-width: 52rem) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 34rem) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    display: flex; flex-direction: column; overflow: hidden; color: inherit;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    transition: transform .18s, border-color .18s, box-shadow .18s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 28px rgb(0 0 0 / .10); text-decoration: none; }
+  .card img { aspect-ratio: 8 / 5; width: 100%; object-fit: cover; border-bottom: 1px solid var(--line); background: #0d0f12; }
+  .card .body { padding: .85rem .95rem 1rem; display: flex; flex-direction: column; flex: 1; }
+  .card .t { font-weight: 600; font-size: .98rem; display: block; margin-bottom: .3rem; }
+  .card .d { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+  .card .y { color: var(--muted); font-size: .8rem; margin-top: auto; padding-top: .5rem; display: block; letter-spacing: .04em; }
+
+  /* ---------- dropdowns ---------- */
+  details { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: .75rem; overflow: hidden; }
+  details[open] { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  summary { cursor: pointer; list-style: none; padding: .95rem 1.1rem; display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+  summary::after {
+    content: ""; width: .5rem; height: .5rem; flex: none; margin-left: auto;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg) translateY(-2px); transition: transform .2s;
+  }
+  details[open] summary::after { transform: rotate(225deg) translateY(-2px); }
+  .s-t { font-weight: 600; }
+  .s-o { color: var(--muted); font-size: .9rem; }
+  .s-w { color: var(--muted); font-size: .86rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .pane { padding: 1rem 1.1rem 1.2rem; border-top: 1px solid var(--line); }
+  .pane > :first-child { margin-top: 0; }
+  .pane ul { margin: 0; padding-left: 1.1rem; }
+  .pane li { margin-bottom: .5rem; }
+  .pane li::marker { color: var(--muted); }
+  .pane li:last-child { margin-bottom: 0; }
+  .pane p { margin: 0 0 .8rem; }
+  .g { font-weight: 600; }
+
+  /* ---------- timeline ---------- */
+  .tl { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 1px solid var(--line); }
+  .tl li { position: relative; padding: 0 0 1rem .25rem; }
+  .tl li:last-child { padding-bottom: 0; }
+  .tl li::before { content: ""; position: absolute; left: -1.42rem; top: .55rem; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .tl .w { display: block; color: var(--muted); font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+
+  /* ---------- chips + education ---------- */
+  .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+  .chips li { border: 1px solid var(--line); border-radius: 999px; padding: .3rem .7rem; font-size: .86rem; color: var(--muted); }
+  .edu { display: grid; grid-template-columns: 1fr auto; gap: .1rem 1rem; align-items: baseline; margin-bottom: .8rem; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu .s { color: var(--muted); font-size: .88rem; white-space: nowrap; text-align: right; }
+  @media (max-width: 30rem) { .edu { grid-template-columns: 1fr; } .edu .s { text-align: left; } }
+
+  kbd { font: inherit; color: var(--mark); border-bottom: 1px dotted var(--mark); }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0 3.5rem; color: var(--muted); font-size: .92rem; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: .8rem; }
+
+  @media print {
+    :root { --fg: #000; --muted: #444; --accent: #000; --line: #bbb; --card: #fff; }
+    .bar, .btns { display: none; }
+    .pane { display: block !important; }
+    details { border: 0; margin-bottom: 1.5rem; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <picture>
+      <source srcset="../assets/site/avatar-96.webp" type="image/webp">
+      <img src="../assets/site/avatar-96.jpg" alt="" width="96" height="96">
+    </picture>
+    <span class="nm">Chris D'Silva</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="shot">
+      <picture>
+        <source srcset="../assets/site/avatar-480.webp" type="image/webp">
+        <img src="../assets/site/avatar-480.jpg" alt="Chris D'Silva" width="480" height="480">
+      </picture>
+    </div>
+    <div>
+      <h1>Chris D'Silva</h1>
+      <p class="tag">Validation Scientist — Equipment &amp; Site Qualification · Cherry Hill, NJ</p>
+      <p class="lede">I keep aseptic manufacturing sites inspection-ready. VHP and autoclave cycle development, isolator qualification, temperature mapping, and the requalification schedules that hold it all together — from the protocol to the FDA audit response.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:chrisdsilva007@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg>Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/chrisdsilva07/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.7 8.75 22 10.7 22 14.1V21h-4v-6.1c0-1.5-.54-2.5-1.87-2.5-1.02 0-1.63.68-1.9 1.34-.1.24-.13.57-.13.9V21h-4V9z"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/ChrisD-7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a>
+        <a class="btn" href="../assets/files/chris-dsilva-resume.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6V2zm8 1.5V9h5.5L14 3.5zM8 13h8v1.6H8V13zm0 3.2h8v1.6H8v-1.6z"/></svg>Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>I work between engineering and regulatory evidence: I write the protocols, run the studies, close the CAPAs and deviations, and then defend the documents when FDA comes in. Sterile and 503B compounding operations are unforgiving about detail, which is the part I like.</p>
+    <p>I hold a Master of Science in Industrial and Systems Engineering from Rutgers University and a Bachelor of Engineering in Mechanical Engineering from the University of Mumbai.</p>
+
+    <details>
+      <summary>
+        <span class="s-t">Skills</span>
+        <span class="s-o">Validation, compliance, and document systems</span>
+      </summary>
+      <div class="pane">
+        <ul class="chips">
+          <li>VHP cycle development</li>
+          <li>Autoclave cycles</li>
+          <li>Isolator qualification</li>
+          <li>Temperature mapping</li>
+          <li>Requalification scheduling</li>
+          <li>FDA audit response</li>
+          <li>CAPA &amp; deviation closure</li>
+          <li>Change control</li>
+          <li>Filter comparability &amp; flush recipes</li>
+          <li>Serialization (Track &amp; Trace)</li>
+          <li>Vendor qualification</li>
+          <li>Veeva Vault</li>
+        </ul>
+        <p class="eyebrow" style="margin-top:2rem">Software &amp; credentials</p>
+        <ul class="chips">
+          <li>Lean Six Sigma Green Belt</li>
+          <li>FlexSim</li>
+          <li>Arena</li>
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>SQL</li>
+          <li>Python</li>
+          <li>R</li>
+          <li>MATLAB</li>
+          <li>SAP</li>
+          <li>AutoCAD</li>
+          <li>SolidWorks</li>
+          <li>Ansys</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Education</span>
+        <span class="s-o">Rutgers · Princeton · Mumbai</span>
+      </summary>
+      <div class="pane">
+        <div class="edu"><span><strong>Rutgers University</strong> — M.S. Industrial &amp; Systems Engineering</span><span class="s">2022 – 2024</span></div>
+        <div class="edu"><span><strong>Princeton University</strong> — ORF 535, Financial Risk &amp; Wealth Management</span><span class="s">2023</span></div>
+        <div class="edu"><span><strong>University of Mumbai</strong> — B.E. Mechanical Engineering</span><span class="s">2016 – 2020</span></div>
+        <div class="edu"><span><strong>INFORMS</strong> — Rutgers New Brunswick chapter</span><span class="s">2023 – Present</span></div>
+        <div class="edu"><span><strong>Alpha Pi Mu</strong> — Industrial &amp; Systems Engineering honor society, Rutgers</span><span class="s">2024 – Present</span></div>
+      </div>
+    </details>
+  </section>
+  <section id="experience" aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <p class="sub">Two roles at Hikma Pharmaceuticals. Open either one for the detail.</p>
+
+    <details open>
+      <summary>
+        <span class="s-t">Sr. Scientist, Equipment Validation</span>
+        <span class="s-o">Hikma Pharmaceuticals · Cherry Hill, NJ</span>
+        <span class="s-w">Jul 2026 – Present</span>
+      </summary>
+      <div class="pane">
+        <ul>
+          <li>Close requalifications for production lines against the equipment actually used in production.</li>
+          <li>Led a new-filter comparability study — pump flow rate and volumetric flux testing to qualify the replacement against the incumbent filter.</li>
+          <li>Developed filter flush recipes per PDA guidance, tuned to product density, viscosity, and surface tension; built WFI and IPA recipes to site requirements.</li>
+          <li>Qualifying the Rotzinger CPS 1900 Connected Packaging Serialization system: vendor requirements plus site-specific qualification, delivered through line integration, including audit trail and software checks.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Validation Engineer</span>
+        <span class="s-o">Hikma Pharmaceuticals, 503B Outsourcing Facility</span>
+        <span class="s-w">Sep 2024 – Jul 2026</span>
+      </summary>
+      <div class="pane">
+        <ul>
+          <li><span class="g">Sterilization &amp; aseptic cycles.</span> VHP qualification — cycle development and load creation driven by business demand, with the operations team. Autoclave cycle development for Automatic Syringe Filler loads. Isolator qualification for production loads.</li>
+          <li><span class="g">Environmental &amp; thermal qualification.</span> Temperature mapping of stability chambers, refrigerators, incubators, vaults, warehouses, and large coolers. Open-door studies and requalifications to resolve incubator temperature deviations. Clean room HEPA filter requalification by airflow and particle counts, with patch tracking per site SOP. Qualified the site's particle counters and authored the SOPs and work instructions for them.</li>
+          <li><span class="g">Compliance &amp; inspection support.</span> FDA audit response — CAPAs, deviation closure, filter integrity tester verification studies, and pump pressure studies. Completed incomplete qualifications, CAPAs, and deviations to close the site out. Built and defended the site-wide requalification schedule against regulatory requirements, site SOPs, and operational need.</li>
+          <li><span class="g">Trending &amp; vendor qualification.</span> Annual trend reports for temperature-, differential-pressure-, and humidity-monitored areas, against product storage guidelines and per-room requirements. Qualified the WFI testing vendor, plus TOC and conductivity meters, Milli-Q water systems, and lab instrumentation (scales, pH meters).</li>
+          <li><span class="g">Cross-functional protocols.</span> Authored the Smart Hood System qualification protocol as an FDA audit response, coordinating engineering, microbiology, compounding, and external contractors — including continuous environmental monitoring of differential pressure, airflow, and particle counts.</li>
+          <li><span class="g">Decommissioning.</span> Supported site closure — archival of qualification documents and protocols under change control, and closure of the affected areas and equipment.</li>
+        </ul>
+        <p class="s-o" style="margin:.9rem 0 0">Documentation: Veeva Vault — qualification and controlled document management.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Career timeline</span>
+        <span class="s-o">How I got here</span>
+      </summary>
+      <div class="pane">
+        <ul class="tl">
+          <li><span class="w">Jul 2026</span>Promoted to Sr. Scientist, Equipment Validation at Hikma's Cherry Hill, NJ site.</li>
+          <li><span class="w">2026</span>Filter comparability study for a new filter introduction, and flush-recipe development per PDA guidance.</li>
+          <li><span class="w">2024 – 2026</span>Supported site decommissioning and qualification document archival under change control.</li>
+          <li><span class="w">2024 – 2026</span>Authored the Smart Hood System qualification protocol as an FDA audit response, with continuous environmental monitoring.</li>
+          <li><span class="w">Sep 2024</span>Joined Hikma's 503B outsourcing facility as Validation Engineer — VHP and autoclave cycle development.</li>
+          <li><span class="w">Feb 2024</span>Inducted into Alpha Pi Mu, the Industrial Engineering honor society.</li>
+          <li><span class="w">Dec 2023</span>Exchange semester at Princeton University under Prof. John Mulvey.</li>
+          <li><span class="w">Jun 2023</span>Graduate engineering intern at Hikma Pharmaceuticals.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Selected work</h2>
+    <p class="sub">Analytics and simulation projects from my graduate work, with the numbers that came out of them.</p>
+    <div class="grid">
+
+      <a class="card" href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">
+        <picture>
+          <source srcset="../assets/site/kan-fraud.webp" type="image/webp">
+          <img src="../assets/site/kan-fraud.jpg" alt="Kolmogorov–Arnold network classification output" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Fraud detection with Kolmogorov–Arnold Networks</span>
+          <span class="d">KAN against an MLP baseline on supply-chain fraud data — 99% test accuracy from a derived symbolic formula, with better interpretability.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/ChrisD-7/reddit_NLP">
+        <picture>
+          <source srcset="../assets/site/reddit-nlp.webp" type="image/webp">
+          <img src="../assets/site/reddit-nlp.jpg" alt="Topic clusters from the Rutgers and UPenn subreddit analysis" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Rutgers vs. UPenn subreddit analysis</span>
+          <span class="d">Feature engineering, classifier comparison, and grid-search tuning with Gemini embeddings; themes visualized through t-SNE and word clouds.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">
+        <picture>
+          <source srcset="../assets/site/energy-lstm.webp" type="image/webp">
+          <img src="../assets/site/energy-lstm.jpg" alt="Forecast against actual day-ahead energy prices" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">LSTM forecasting of California energy prices</span>
+          <span class="d">Day-ahead locational marginal pricing from 26,000+ hourly observations of load and gas price; strongest on price spikes.</span>
+          <span class="y">2024 · Colab</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/ChrisD-7/Chat-with-PDF">
+        <picture>
+          <source srcset="../assets/site/chat-with-pdf.webp" type="image/webp">
+          <img src="../assets/site/chat-with-pdf.jpg" alt="Chat interface answering questions from an uploaded PDF" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Chat-with-PDF on Gemini and FAISS</span>
+          <span class="d">Context-aware document Q&amp;A over a FAISS vector index — retrieval and generation wired into one interface.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">
+        <picture>
+          <source srcset="../assets/site/starbucks-arena.webp" type="image/webp">
+          <img src="../assets/site/starbucks-arena.jpg" alt="Arena simulation model of a service queue" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Queue optimization by Arena simulation</span>
+          <span class="d">Modeled Rutgers' campus Starbucks with lognormal inter-arrival times; extra order-processing capacity cut beverage wait from 4.44 to 0.08 minutes.</span>
+          <span class="y">2023 · Report</span>
+        </div>
+      </a>
+
+            <a class="card" href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1">
+        <picture>
+          <source srcset="../assets/site/condo-monte-carlo.webp" type="image/webp">
+          <img src="../assets/site/condo-monte-carlo.jpg" alt="Monte Carlo projection of savings growth against investment allocations" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Portfolio strategy for a condo purchase goal</span>
+          <span class="d">Monte Carlo simulation of a $500k down payment toward a $1.5M condo — compared 10-year SPY/TLT allocations at a 25% capital gains rate across 5-, 7- and 10-year horizons.</span>
+          <span class="y">2023 · Colab</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing">
+        <picture>
+          <source srcset="../assets/site/solar-canopy.webp" type="image/webp">
+          <img src="../assets/site/solar-canopy.jpg" alt="Monte Carlo cost distribution for a solar canopy project" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Solar canopy project proposal</span>
+          <span class="d">Monte Carlo cost modeling with 5th and 90th percentile ranges, with recommendations drawn from NPV, IRR and present worth — including tax and social factors.</span>
+          <span class="y">2023 · Colab</span>
+        </div>
+      </a>
+
+<a class="card" href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">
+        <picture>
+          <source srcset="../assets/site/lidar-risk.webp" type="image/webp">
+          <img src="../assets/site/lidar-risk.jpg" alt="Fault tree reliability model for a lidar system" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Risk analysis for lidar failure in autonomous vehicles</span>
+          <span class="d">Fault tree and event tree analysis with Weibull reliability modeling — 11.66% system failure probability, laser emitter as the critical point.</span>
+          <span class="y">2022 · Report</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:chrisdsilva007@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/chrisdsilva07/">LinkedIn</a>
+      <a href="https://github.com/ChrisD-7">GitHub</a>
+      <a href="../assets/files/chris-dsilva-resume.pdf">Résumé</a>
+      <a href="https://twitter.com/chrisdsilvaOO7">Twitter</a>
+    </div>
+    <p style="margin:0">Last updated 2026-09.</p>
+  </div>
+</footer>
+
+</body>
+</html>
