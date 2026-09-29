@@ -180,8 +180,15 @@
   .row-i .k { font-size: .88rem; color: var(--muted); }
   @media (max-width: 48rem) { .row-i { grid-template-columns: 1fr; gap: .25rem; } }
 
-  .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
-  .chips li { border: 1px solid var(--hair); border-radius: 999px; padding: .32rem .78rem; font-size: .85rem; color: var(--muted); transition: border-color .25s, color .25s; }
+  .toolgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.25rem 3rem; }
+  .toolcat { border-top: 1px solid var(--hair); padding-top: .9rem; }
+  .toolcat h3 {
+    font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .6rem;
+  }
+  .toolcat ul { list-style: none; margin: 0; padding: 0; }
+  .toolcat li { font-size: .95rem; line-height: 1.75; }
+  @media (max-width: 40rem) { .toolgrid { grid-template-columns: 1fr; gap: 1.75rem; } }
   .chips li:hover { border-color: var(--accent); color: var(--ink); }
 
   /* details */
@@ -449,39 +456,42 @@
 
   <section id="toolbox" aria-labelledby="tb-h">
     <div class="head"><h2 id="tb-h" class="rv">Toolbox</h2></div>
-    <ul class="chips rv">
-      <li>VHP cycle development</li>
-      <li>Autoclave cycles</li>
-      <li>Isolator qualification</li>
-      <li>Temperature mapping</li>
-      <li>Differential pressure &amp; airflow</li>
-      <li>Particle counting</li>
-      <li>Requalification scheduling</li>
-      <li>FDA audit response</li>
-      <li>CAPA &amp; deviation closure</li>
-      <li>Change control</li>
-      <li>Filter comparability &amp; flush recipes</li>
-      <li>Serialization (Track &amp; Trace)</li>
-      <li>Vendor qualification</li>
-      <li>Veeva Vault</li>
-    </ul>
 
-    <p class="eyebrow" style="margin-top:2rem">Software &amp; credentials</p>
-        <ul class="chips">
-          <li>Lean Six Sigma Green Belt</li>
-          <li>FlexSim</li>
-          <li>Arena</li>
-          <li>Tableau</li>
-          <li>Power BI</li>
-          <li>SQL</li>
-          <li>Python</li>
-          <li>R</li>
-          <li>MATLAB</li>
-          <li>SAP</li>
-          <li>AutoCAD</li>
-          <li>SolidWorks</li>
-          <li>Ansys</li>
+    <div class="toolgrid rv">
+      <div class="toolcat">
+        <h3>Design &amp; simulation</h3>
+        <ul>
+          <li>SolidWorks · AutoCAD</li>
+          <li>Ansys (FEA / basic CFD)</li>
+          <li>Rockwell Arena · FlexSim</li>
         </ul>
+      </div>
+      <div class="toolcat">
+        <h3>Computing &amp; data</h3>
+        <ul>
+          <li>Python (NumPy, SciPy, PyTorch) · MATLAB</li>
+          <li>R · SQL · Tableau · Power BI</li>
+        </ul>
+      </div>
+      <div class="toolcat">
+        <h3>Physical instrumentation</h3>
+        <ul>
+          <li>Multi-point thermal mapping</li>
+          <li>Airborne particle counters</li>
+          <li>Differential pressure gauges</li>
+          <li>Membrane flux &amp; flow decay</li>
+        </ul>
+      </div>
+      <div class="toolcat">
+        <h3>Aseptic systems &amp; compliance</h3>
+        <ul>
+          <li>VHP decontamination · Autoclaves</li>
+          <li>Isolator qualification · 503B / cGMP</li>
+          <li>PDA Technical Reports · Serialization</li>
+          <li>Lean Six Sigma Green Belt</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
 </main>
