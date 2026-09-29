@@ -165,7 +165,7 @@
   @media (max-width: 34rem) { .grid { grid-template-columns: 1fr; } }
   .card { display: flex; flex-direction: column; }
   .card .frame { overflow: hidden; border: 1px solid var(--hair); border-radius: 6px; background: #0d0f12; }
-  .card img { aspect-ratio: 8 / 5; width: 100%; object-fit: cover; filter: saturate(.88); transition: transform .5s cubic-bezier(.4,0,.2,1), filter .5s ease; }
+  .card img { -webkit-user-drag: none; user-select: none; aspect-ratio: 8 / 5; width: 100%; object-fit: cover; filter: saturate(.88); transition: transform .5s cubic-bezier(.4,0,.2,1), filter .5s ease; }
   .card:has(.t a:hover) img { transform: scale(1.035); filter: saturate(1); }
   .card .t { font-weight: 600; font-size: .98rem; margin: .8rem 0 .3rem; }
   .card .d { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 0; }
@@ -394,10 +394,10 @@
 
     <div class="grid">
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/fda483-graph.webp" type="image/webp">
-          <img src="../assets/site/fda483-graph.jpg" alt="Knowledge-graph view of FDA Form 483 inspectional observations" width="640" height="400" loading="lazy" decoding="async" id="fda483-thumb">
+          <img src="../assets/site/fda483-graph.jpg" alt="Knowledge-graph view of FDA Form 483 inspectional observations" width="640" height="400" loading="lazy" decoding="async" id="fda483-thumb" draggable="false">
         </picture></div>
         <span class="t"><a href="https://fda483.org">FDA 483 regulatory knowledge graph</a></span>
         <span class="d">A graph built from FDA Form 483 inspectional observations across sterile manufacturing and 503B facilities, modelling equipment failure modes, environmental-monitoring deviations and citations to surface recurring systemic causes. Python extraction pipelines, ontology design, and graph representations.</span>
@@ -406,77 +406,77 @@
       <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/sop-vision.webp" type="image/webp">
-          <img src="../assets/site/sop-vision.jpg" alt="Tiered vision pipeline: frame filtering, surface-coverage segmentation, and a generated audit log" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/sop-vision.jpg" alt="Tiered vision pipeline: frame filtering, surface-coverage segmentation, and a generated audit log" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t">Hierarchical vision pipeline for video review</span>
         <span class="d">Building a natural-language search tool over recorded video. Tiered vision models discard empty frames, measure what happened, and write the audit record, so the language model reports measured values rather than inferring them.</span>
         <span class="y">In development · Internal project</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/kan-fraud.webp" type="image/webp">
-          <img src="../assets/site/kan-fraud.jpg" alt="Kolmogorov–Arnold network classification output" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/kan-fraud.jpg" alt="Kolmogorov–Arnold network classification output" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">Fraud detection with Kolmogorov–Arnold Networks</a></span>
         <span class="d">KAN against an MLP baseline on supply-chain fraud data. The 99% figure was target leakage; rebuilt and re-measured at ROC-AUC 0.88, with a single column (Type) carrying the signal.</span>
         <span class="y">2024 · GitHub</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/energy-lstm.webp" type="image/webp">
-          <img src="../assets/site/energy-lstm.jpg" alt="Forecast against actual day-ahead energy prices" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/energy-lstm.jpg" alt="Forecast against actual day-ahead energy prices" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">LSTM forecasting of California energy prices</a></span>
         <span class="d">Day-ahead locational marginal pricing from 26,000+ hourly observations of load and gas price; strongest on price spikes.</span>
         <span class="y">2024 · Colab</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/chat-with-pdf.webp" type="image/webp">
-          <img src="../assets/site/chat-with-pdf.jpg" alt="Chat interface answering questions from an uploaded PDF" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/chat-with-pdf.jpg" alt="Chat interface answering questions from an uploaded PDF" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://github.com/ChrisD-7/Chat-with-PDF">Chat-with-PDF on Gemini and FAISS</a></span>
         <span class="d">Context-aware document Q&amp;A over a FAISS vector index: retrieval and generation wired into one interface.</span>
         <span class="y">2024 · GitHub</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/starbucks-arena.webp" type="image/webp">
-          <img src="../assets/site/starbucks-arena.jpg" alt="Arena simulation model of a service queue" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/starbucks-arena.jpg" alt="Arena simulation model of a service queue" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">Queue optimization by Arena simulation</a></span>
         <span class="d">Modeled Rutgers' campus Starbucks with lognormal inter-arrival times; extra order-processing capacity cut beverage wait from 4.44 to 0.08 minutes.</span>
         <span class="y">2023 · Report</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/condo-monte-carlo.webp" type="image/webp">
-          <img src="../assets/site/condo-monte-carlo.jpg" alt="Monte Carlo projection of savings growth against investment allocations" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/condo-monte-carlo.jpg" alt="Monte Carlo projection of savings growth against investment allocations" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1">Portfolio strategy for a condo purchase goal</a></span>
         <span class="d">Monte Carlo simulation of a $500k down payment toward a $1.5M condo, comparing 10-year SPY/TLT allocations at a 25% capital gains rate across 5-, 7- and 10-year horizons.</span>
         <span class="y">2023 · Colab</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/solar-canopy.webp" type="image/webp">
-          <img src="../assets/site/solar-canopy.jpg" alt="Monte Carlo cost distribution for a solar canopy project" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/solar-canopy.jpg" alt="Monte Carlo cost distribution for a solar canopy project" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing">Solar canopy project proposal</a></span>
         <span class="d">Monte Carlo cost modeling with 5th and 90th percentile ranges, with recommendations drawn from NPV, IRR and present worth, including tax and social factors.</span>
         <span class="y">2023 · Colab</span>
       </div>
 
-<div class="card rv">
+      <div class="card rv">
         <div class="frame"><picture>
           <source srcset="../assets/site/lidar-risk.webp" type="image/webp">
-          <img src="../assets/site/lidar-risk.jpg" alt="Fault tree reliability model for a lidar system" width="640" height="400" loading="lazy" decoding="async">
+          <img src="../assets/site/lidar-risk.jpg" alt="Fault tree reliability model for a lidar system" width="640" height="400" loading="lazy" decoding="async" draggable="false">
         </picture></div>
         <span class="t"><a href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">Risk analysis for lidar failure in autonomous vehicles</a></span>
         <span class="d">Fault tree and event tree analysis with Weibull reliability modeling. System failure probability 11.66%, with the laser emitter as the critical point.</span>
