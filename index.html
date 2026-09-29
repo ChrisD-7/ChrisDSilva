@@ -1,403 +1,404 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris D'Silva — Validation Scientist</title>
+<meta name="description" content="Equipment and site validation scientist at Hikma Pharmaceuticals. VHP, autoclave and isolator cycle development, temperature mapping, FDA audit response, and serialization line qualification.">
+<link rel="canonical" href="https://chrisd-7.github.io/ChrisDSilva/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a5fb4'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Chris D'Silva — Validation Scientist, Hikma Pharmaceuticals">
+<meta property="og:description" content="VHP, autoclave and isolator cycle development, temperature mapping, FDA audit response, and serialization line qualification.">
+<meta property="og:url" content="https://chrisd-7.github.io/ChrisDSilva/">
+<meta property="og:image" content="https://chrisd-7.github.io/ChrisDSilva/assets/site/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #fbfbfd;
+    --fg: #16181d;
+    --muted: #5f6368;
+    --line: #e7e8ea;
+    --accent: #1a5fb4;
+    --mark: #b3541e;
+    --radius: 14px;
+    --max: 62rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --card: #161920;
+      --fg: #e6e8ee;
+      --muted: #9aa3b2;
+      --line: #262b36;
+      --accent: #7fb3ff;
+      --mark: #ffb27a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
 
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Chris D'Silva - Systems Engineering Student at Rutgers University" />
-    <meta property="og:description" content="I'm a graduate student in Systems Engineering from Rutgers University. Explore my projects, updates, and contact information." />
-    <meta property="og:image" content="https://chrisd-7.github.io/ChrisDSilva/assets/images/preview.gif" />
-    <meta property="og:url" content="https://chrisd-7.github.io/ChrisDSilva/" />
-    <meta property="og:type" content="website" />
-    
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Chris D'Silva - Systems Engineering Student at Rutgers University" />
-    <meta name="twitter:description" content="I'm a graduate student in Systems Engineering from Rutgers University. Explore my projects, updates, and contact information." />
-    <meta name="twitter:image" content="https://chrisd-7.github.io/ChrisDSilva/assets/images/preview.gif" />
+  /* ---------- top bar ---------- */
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 84%, transparent);
+    backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-in { display: flex; align-items: center; gap: .75rem; height: 3.75rem; }
+  .bar img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+  .bar .nm { font-weight: 600; letter-spacing: -0.01em; }
+  .bar nav { margin-left: auto; display: flex; gap: 1.1rem; font-size: .94rem; }
+  .bar nav a { color: var(--muted); }
+  .bar nav a:hover { color: var(--fg); text-decoration: none; }
+  @media (max-width: 34rem) {
+    .bar .nm { display: none; }
+    .bar nav { gap: .9rem; margin-left: 0; }
+    .bar-in { justify-content: space-between; }
+  }
 
-    <meta name="description" content="I'm a graduate student in Systems Engineering from Rutgers University." />
-    <title>Chris D'Silva</title>
-    <meta name="google-site-verification" content="t3BNIgLdPJ_G9KMnCm3H1OvXn44toNbHsf7i2DZJKo4" />
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 210px 1fr; gap: 2.25rem; align-items: center; padding: 3.5rem 0 2.5rem; }
+  .hero .shot img { width: 210px; height: 210px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+  .tag { color: var(--muted); font-size: 1.05rem; margin: 0 0 .9rem; }
+  .lede { margin: 0 0 1.4rem; max-width: 38rem; }
+  .btns { display: flex; flex-wrap: wrap; gap: .55rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .45rem;
+    padding: .5rem .85rem; border: 1px solid var(--line); border-radius: 999px;
+    color: var(--fg); font-size: .93rem; background: var(--card);
+    transition: border-color .18s, transform .18s;
+  }
+  .btn:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-1px); }
+  .btn svg { width: 15px; height: 15px; fill: currentColor; opacity: .75; }
+  @media (max-width: 46rem) {
+    .hero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2.25rem; }
+    .hero .shot img { width: 130px; height: 130px; }
+  }
+
+  /* ---------- sections ---------- */
+  h2 { font-size: 1.35rem; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 .35rem; }
+  .sub { color: var(--muted); font-size: .95rem; margin: 0 0 1.5rem; }
+  section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+
+  /* ---------- work grid ---------- */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+  @media (max-width: 52rem) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 34rem) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    display: flex; flex-direction: column; overflow: hidden; color: inherit;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    transition: transform .18s, border-color .18s, box-shadow .18s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 28px rgb(0 0 0 / .10); text-decoration: none; }
+  .card img { aspect-ratio: 8 / 5; width: 100%; object-fit: cover; border-bottom: 1px solid var(--line); background: #0d0f12; }
+  .card .body { padding: .85rem .95rem 1rem; display: flex; flex-direction: column; flex: 1; }
+  .card .t { font-weight: 600; font-size: .98rem; display: block; margin-bottom: .3rem; }
+  .card .d { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+  .card .y { color: var(--muted); font-size: .8rem; margin-top: auto; padding-top: .5rem; display: block; letter-spacing: .04em; }
+
+  /* ---------- dropdowns ---------- */
+  details { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: .75rem; overflow: hidden; }
+  details[open] { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  summary { cursor: pointer; list-style: none; padding: .95rem 1.1rem; display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+  summary::after {
+    content: ""; width: .5rem; height: .5rem; flex: none; margin-left: auto;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg) translateY(-2px); transition: transform .2s;
+  }
+  details[open] summary::after { transform: rotate(225deg) translateY(-2px); }
+  .s-t { font-weight: 600; }
+  .s-o { color: var(--muted); font-size: .9rem; }
+  .s-w { color: var(--muted); font-size: .86rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .pane { padding: 1rem 1.1rem 1.2rem; border-top: 1px solid var(--line); }
+  .pane > :first-child { margin-top: 0; }
+  .pane ul { margin: 0; padding-left: 1.1rem; }
+  .pane li { margin-bottom: .5rem; }
+  .pane li::marker { color: var(--muted); }
+  .pane li:last-child { margin-bottom: 0; }
+  .pane p { margin: 0 0 .8rem; }
+  .g { font-weight: 600; }
+
+  /* ---------- timeline ---------- */
+  .tl { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 1px solid var(--line); }
+  .tl li { position: relative; padding: 0 0 1rem .25rem; }
+  .tl li:last-child { padding-bottom: 0; }
+  .tl li::before { content: ""; position: absolute; left: -1.42rem; top: .55rem; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .tl .w { display: block; color: var(--muted); font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+
+  /* ---------- chips + education ---------- */
+  .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+  .chips li { border: 1px solid var(--line); border-radius: 999px; padding: .3rem .7rem; font-size: .86rem; color: var(--muted); }
+  .edu { display: grid; grid-template-columns: 1fr auto; gap: .1rem 1rem; align-items: baseline; margin-bottom: .8rem; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu .s { color: var(--muted); font-size: .88rem; white-space: nowrap; text-align: right; }
+  @media (max-width: 30rem) { .edu { grid-template-columns: 1fr; } .edu .s { text-align: left; } }
+
+  kbd { font: inherit; color: var(--mark); border-bottom: 1px dotted var(--mark); }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0 3.5rem; color: var(--muted); font-size: .92rem; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: .8rem; }
+
+  @media print {
+    :root { --fg: #000; --muted: #444; --accent: #000; --line: #bbb; --card: #fff; }
+    .bar, .btns { display: none; }
+    .pane { display: block !important; }
+    details { border: 0; margin-bottom: 1.5rem; }
+    section { break-inside: avoid; }
+  }
+</style>
 </head>
-
-
 <body>
-    <div style="width:1000px;margin: 0px auto;">
-        <header id="header" width="400px" style="display:flex;justify-content: space-around;">
-            <a href="#profile-intro">Home</a>
-            <a href="#updates">Updates</a>
-            <a href="#projects">Projects</a>
-        </header>
-        <div id="profile">
-            <div id="profile-pic">
-                <img src="assets/images/profile.jpeg" />
-            </div>
-            <div id="profile-intro">
-                <div id="profile-name">Chris DSilva</div>
-                <div id="profile-email">chris dot dsilva at rutgers dot edu</div>
-                <p>
-                    I hold a Master's degree in Industrial and Systems Engineering from Rutgers University.
-                    On campus, I worked on time series analysis research for renewable energy systems and served as the operations lead at the <a href="https://www.rusolarcar.com/">solar electric-vehicle club</a>.
-                    <br>
-                    I’m interested in working at companies that solve complex problems and tackle frontier markets, especially those involving high technical or scientific challenges.
-                    My goal is to leverage my engineering background and analytical skills to drive innovation and create impactful solutions in these dynamic industries.
-                    <br>
-                </p>
-                <p>
-                    My current projects include: 
-                <ul style="list-style-type:none; padding-left: 0;">
-                    <li>
-                        <p>
-                            <strong>(New!)</strong> An <a href="assets/files/articles/KAN-Article/KANArticle.html">article</a> on Fraud Detection in Supply Chains Using Kolmogorov Arnold Networks
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            An <a href="https://drive.google.com/file/d/1MmwT8zMn-TE4ezESe63qov6KNngQ2kGe/view?usp=drive_link">article</a> on how FinGPT can be revolutionary in the Indian ecosystem
-                        </p>
-                    </li>
-                </ul>
-                </p>
-                <div>
-                    <a href="assets\files\chris_dsilva_.pdf">
-                        Resume
-                    </a> /
-                    <a href="https://twitter.com/chrisdsilvaOO7">
-                        Twitter
-                    </a> /
-                    <a href="https://github.com/ChrisD-7">
-                        Github
-                    </a> /
-                    <a href="https://www.linkedin.com/in/chrisdsilva07/">
-                        Linkedin
-                    </a>
-                    </a>
-                </div>
-            </div>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="section" id="updates">
-            <h1>Updates</h1>
-            <ul>
-                <li> <b>Jun 2024</b> Currently working on Time-series Analysis research for <a href="https://sites.rutgers.edu/azizezzat/research/"> Renewable Energy Systems</a></li>
-                <li> <b>Mar 2024</b> Started working on NLP research under<a href="https://scholar.google.com/citations?user=-6c1edsAAAAJ&hl=en"> Tawfiq Ammari</a></li>
-                <li> <b>Feb 2024</b> Invited to the Industrial Engineering Honor Society <a href='assets/files/APM Invitation letter - Chris Dsilva .pdf'>Alpha Pi Mu</a> 
-                <li> <b>Dec 2023</b> Completed my first semester as an exchange student at Princeton  studying under <a href="https://mulvey.princeton.edu/"> Prof. John Mulvey</a>
-                <li> <b>May 2023</b> Interned at <a href="https://www.hikma503b.com/">Hikma Pharmaceuticals</a> as a graduate engineering intern</li>
-            </ul>
-            <p></p>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="divider"></div>
-        <div style="display:flex;flex-direction: column;" id="projects">
-            <h1>Projects</h1>
-            <h2>Simulation in Production Systems and Supply Chain</h2>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/people.gif" />
-                    <a href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing" class="research-proj-title">
-                        Queue Optimization at Rutgers Starbucks Using Arena Simulation 
-                    </a>
-                    <p>
-                        Arena simulation was employed to optimize the queuing system at Rutgers University's on-campus Starbucks.  
-                        Post-optimization, with additional resources for order processing, wait times dropped from 4.44 to 0.08 minutes for beverages. 
-                        The analysis involved lognormal inter-arrival times, with R programming used for further distribution verification. 
-                        <br><br><b>May 2023</b></br>
-                        <a href="https://drive.google.com/drive/folders/1l0AGYQnloqidKSeREeT7OCbru6aGn_eo?usp=sharing">Arena</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                        <a href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">Report</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/factory.gif" />
-                    <a href="https://docs.google.com/presentation/d/13_gQlOXn5tjUVfsFjQ8HOIQbU6pj1wmF/edit?usp=sharing&ouid=117751680139828454883&rtpof=true&sd=true" class="research-proj-title">
-                        Optimizing CNC Stations in Turbine Manufacturing 
-                    </a>
-                    <p>
-                        This project optimizes Mareana Turbine's production lines, identifying bottlenecks at QA and CNC stations through Flexsim simulation. 
-                        Proposed enhancements include additional workstations for key impeller lines and adopting Industry 4.0 technologies like predictive maintenance and AI inspection to boost efficiency.
-                        The strategy aims to meet demand, increase revenue by $700K, and incorporate digital advancements at a $150K cost.
-                        <br><br><b>December 2022</b></br>
-                        <a href="https://drive.google.com/drive/folders/1qlgQ9tQ9yDmx3vQ_kYfpukQJ9BHeg7eI?usp=sharing">FlexSim</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                        <a href="https://docs.google.com/presentation/d/13_gQlOXn5tjUVfsFjQ8HOIQbU6pj1wmF/edit?usp=sharing&ouid=117751680139828454883&rtpof=true&sd=true">Report</a>
-                    </p>
-            </div>
-            <h2>NLP and LLM</h2>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/reddit_NLP.gif" />
-                    <a href="https://github.com/ChrisD-7/reddit_NLP" class="research-proj-title">
-                        Dual Subreddit Analysis: A comparative study of Rutgers and UPenn online communities
-                    </a>
-                    <p>
-                        This project applies NLP and ML techniques to analyze Rutgers and UPenn subreddit discussions,
-                        performing feature engineering,employing multiple classifiers and then utilizing grid search on the best model for parameter tuning, then comparing the model 
-                        custom Neural Network with Gemini API embeddings to discern thematic and sentiment trends.
-                        Results, visualized through t-SNE and word clouds.
-                        <br><br><b>May 2024</b></br>
-                        <a href="https://github.com/ChrisD-7/reddit_NLP">Github</a>
-                    </p>
-            </div>
 
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/openai_Langchain.gif" />
-                    <a href="https://github.com/ChrisD-7/Langchain-Chat-Bot" class="research-proj-title">
-                        Langchain Chat Bot with OPENAI API and OLLAMA Local
-                    </a>
-                    <p>
+<div class="bar">
+  <div class="wrap bar-in">
+    <picture>
+      <source srcset="assets/site/avatar-96.webp" type="image/webp">
+      <img src="assets/site/avatar-96.jpg" alt="" width="96" height="96">
+    </picture>
+    <span class="nm">Chris D'Silva</span>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
 
-                        Developed a dynamic chat bot using OpenAI's APIs and Langchain's OLLAMA Local for real-time language model interactions.
-                        Aimed to showcase seamless integration and operational efficiency, this project emphasizes the use of AI in enhancing conversational user experiences.
-                        It highlights the innovative combination of advanced language processing and local hosting capabilities,
-                        providing a robust framework for AI-driven chat applications.
-                        <br><br><b>April 2024</b></br>
-                        <a href="https://github.com/ChrisD-7/Langchain-Chat-Bot">Github</a>
-                    </p>
-            </div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/chatwpdf.gif" />
-                    <a href="https://github.com/ChrisD-7/Chat-with-PDF" class="research-proj-title">
-                        Chat-with-PDF App with Gemini API and FAISS
-                    </a>
-                    <p>
-                        Developed an application that utilizes Google's Gemini API and FAISS for efficient information retrieval from PDFs
-                        through conversation. Aimed to demonstrate vector database utility and intergrate it into Large Language Model interactions,
-                        offering users a responsive, context-aware chat experience with their documents. 
-                        The project underscores the blend of AI and database search advancements for real-world applications.
-                        <br><br><b>March 2024</b></br>
-                        <a href="https://github.com/ChrisD-7/Chat-with-PDF">Github</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/word2vec.gif" />
-                    <a href="https://github.com/ChrisD-7/Word2Vec-on-Harry-Potter" class="research-proj-title">
-                        Word2Vec on Harry Potter Texts
-                    </a>
-                    <p>
-                        Embarked on an NLP quest with Word2Vec to unlock semantic relationships in the Harry Potter series.
-                        In this project we explore into word embeddings, using the rich narrative to model linguistic contexts and uncover patterns. 
-                        This technical exploration sheds light on character interconnections and thematic elements, providing a playground for AI-driven literary analysis.
-                        <br><br><b>March 2024</b></br>
-                        <a href="https://github.com/ChrisD-7/Word2Vec-on-Harry-Potter">Github</a>
-                    </p>
-            </div>
+<main class="wrap">
 
-
-            <h2>AI in Decision Making and Control</h2>
-            <div class="project-container">
-                <div class="research-thumb">
-                    <img width="320" height="250" src="assets/images/KAN_EDA_and_classification.gif" />
-                </div>
-                <div class="project-details">
-                    <a href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks" class="research-proj-title">
-                        Fraud Detection in Supply Chains Using Kolmogorov Arnold Networks
-                    </a>
-                    <p>
-                        Developed a fraud detection model using Kolmogorov Arnold Networks (KANs), achieving 99% test accuracy.
-                        Compared to Multi-Layer Perceptrons (MLPs), KANs offer better interpretability and adaptability with learnable activation functions.
-                        The derived symbolic formula showed train and test accuracies of 90.4% and 99%, respectively.
-                        This project demonstrates KANs' potential for improving fraud detection in high-stakes sectors like pharmaceuticals, manufacturing,
-                        and legal compliance. Further research is recommended for handling larger datasets and optimizing the model.
-                        <br><br><b>May 2024</b></br>
-                        <a href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">Github</a>
-                    </p>
-                </div>
-            </div>            
-
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/mnist.gif" />
-                    <a href="https://colab.research.google.com/drive/1-l76p746fVmuVTGYHbFUTSvl2Vaw9Rg0?usp=sharing" class="research-proj-title">
-                        CNN to recognize handwritten digits using MNIST
-                    </a>
-                    <p>
-                        Implemented a Convolutional Neural Network to classify handwritten digits from the MNIST
-                        dataset. The goal is to achieve over 90% accuracy, and the provided example reaches 98.57%
-                        accuracy. Covers data preprocessing, model architecture explanation, training
-                        parameters, and evaluation steps.
-                        <br><br><b>September 2023</b></br>
-                        <a href="https://colab.research.google.com/drive/1A5lqVUSTGecbRPEthawTFRBUq363DXmP?authuser=1">Colab</a>
-                    </p>
-            </div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/vae.gif" />
-                    <a href="https://colab.research.google.com/drive/1-l76p746fVmuVTGYHbFUTSvl2Vaw9Rg0?usp=sharing" class="research-proj-title">
-                        Implementing a VAE: Encoder, Decoder, Sampling Mechanism, And Loss Function to Understand Latent Representations 
-                    </a>
-                    <p>
-                        This model uses dense layers to encode images into latent variables, employs reparameterization for sampling, and decodes to reconstruct
-                        images. Training focuses on optimizing latent dimensions to 2 and minimizing reconstruction loss
-                        through binary cross-entropy. Post-training, it quantitatively analyzes latent space (µ, σ) for each
-                        digit.
-                        <br><br><b>November 2023</b></br>
-                        <a href="https://colab.research.google.com/drive/12jMOLw-tmi2S7Y_MMnzjBgnHOjhdBOc5?authuser=1">Colab</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <div class="video-container">
-                        <img src="assets/images/hmm.gif" class="thumbnail-video"
-                            alt="HMM States">
-                    </div>
-                </a>
-                <a href="" class="research-proj-title">
-                    HMM to Decode Random Sequences of States Into Observations to Determine Whether a System is High Risk
-                </a>
-                <p>
-                    The code generates n random sequences of observations (each of size 20 or higher). Each random sequence is decoded to 
-                    find the best set of observations to describe it. If the system is not at high risk, the resulting sequences of states 
-                    is labeled 'Good' and vice versa. If the number of bad labels in the sample of n is greater than a
-                    threshold (≥ 0.3n), then a control is applied with ∆= 0.2 and the steps above are repeated.
-                            <br><br><b>October 2023</b></br>
-                           <a href="https://colab.research.google.com/drive/1-5NiH-8kC68KKrDwgErE0UG7T2_n-AJC?authuser=1#scrollTo=MgSHEuv0x-NQ">Colab</a>
-                </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <div class="video-container">
-                        <img src="assets/images/lstm.gif" class="thumbnail-video"
-                            alt="HMM States">
-                    </div>
-                </a>
-                <a href="" class="research-proj-title">
-                    Vehicle Trajectory Forecasting Using LSTM Networks
-                </a>
-                <p>
-                    The model sequentially processes 62 timesteps of features, including position, velocity, and acceleration, to predict future coordinates. 
-                    An LSTM layer with 50 units is followed by two dense layers with 30 and 10 units, all employing ReLU activation, 
-                    culminating in an output layer that forecasts the vehicle's position for the next 5 timesteps. Trained on a dataset of 18,457 files 
-                    over 60 epochs with a batch size of 32, the model was optimized using the Adam optimizer and Mean Squared Error (MSE) as the loss function. 
-                            <br><br><b>September 2023</b></br>
-                            <a href="https://colab.research.google.com/drive/140jIYrq8ftL-2CU9esh6f4jY3R_vANWr?authuser=1">Colab</a>
-                </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <div class="video-container">
-                        <img src="assets/images/rl.gif" class="thumbnail-video"
-                            alt="HMM States">
-                    </div>
-                </a>
-                <a href="" class="research-proj-title">
-                    Navigating Complexity: Q-Learning for Obstacle Avoidance in a 3D Grid
-                </a>
-                <p>
-                    The environment consists of a 10x10x10 grid with 15 randomly placed obstacles, penalties for staying in place (-2), collisions (-2), a step penalty (-1), and a reward for reaching the goal (10). The Q-learning approach, with parameters alpha = 0.1, gamma = 0.99, and epsilon = 0.1, iterates over 10,000 episodes, adjusting actions to maximize rewards. Post-training, the algorithm determines an optimal policy, demonstrated through an animation of the agent's path, highlighting the model's efficiency in navigating complex environments.
-                            <br><br><b>November 2023</b></br>
-                            <a href="https://colab.research.google.com/drive/1R3a_f-QYhZhAmY8yZhsCxFM03tlxKgR5">Colab</a>
-                </p>
-            </div>
-        <h2>Financial Risk and Wealth Management</h2>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/finance.png" />
-                    <a href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1#scrollTo=YUm1-QWWVtEW" class="research-proj-title">
-                        Optimized Portfolio Strategy for Condo Purchase Goal: A Quantitative Analysis 
-                    </a>
-                    <p>
-                        Employing Monte Carlo simulations and savings growth against investment strategies of varied SPY/TLT allocations over 5, 7, and 10 years, this report provides a quantitative pathway for Jane Doe to accumulate a $500k down payment for a $1.5 million condo. 
-                        A 70/30 SPY/TLT allocation shows the highest 10-year mean capital at $977,952.42 post-tax, inclusive of a 7% salary growth.
-                        <br><br><b>December 2023</b></br>
-                        <a href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1#scrollTo=YUm1-QWWVtEW">Colab</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                        <a href="https://drive.google.com/file/d/1mW-2_dNbw78NnmQ7HnGPgpyeDt4OWd3b/view?usp=sharing">Report</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/solar.webp" />
-                    <a href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing" class="research-proj-title">
-                        Financial Feasibility of Rutgers' Solar Canopy Project 
-                    </a>
-                    <p>
-                        Rutgers University's Lot 64 Solar Canopy Project, at an investment of $1,623,116, aims for sustainable energy generation and EV charging infrastructure. 
-                        The economic analysis includes a 7.42-year break-even point, based on annual revenues of $291,000 from solar savings and $80,000 from EV charging, offset 
-                        by $72,000 in maintenance costs. The project exhibits a positive NPV of $366,140.20 and an IRR of 12.84%, surpassing the 10% discount rate, indicating robust financial health. 
-                        <br><br><b>December 2023</b></br>
-                        <a href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing">Colab</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                        <a href="https://drive.google.com/file/d/1K9Vcxsjjv1cW8e1WHd6YyAUKNEDh_xM5/view?usp=sharing">Report</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/lidar.gif" />
-                    <a href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing" class="research-proj-title">
-                        Risk Analysis for Lidar System Failure in Autonomous Vehicles 
-                    </a>
-                    <p>
-                        This technical report conducts a quantitative risk assessment of lidar system failures in autonomous vehicles using fault tree 
-                        and event tree analyses, reliability and uncertainty analysis, and monetary risk assessment. 
-                        Key findings include a lidar system failure probability of 11.66%, with laser emitter failure identified as a critical failure point. 
-                        Reliability modeling, based on the Weibull distribution, estimates a laser emitter mean time to failure (MTTF) of 8.399 years.
- 
-                        <br><br><b>December 2022</b></br>
-                        <a href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">Report</a>
-                    </p>
-            </div>
-        <h2>Data Analysis</h2>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/lda.png" />
-                    <a href="https://colab.research.google.com/drive/16-C59W6RGPCj5try4FRtHz03OcoW6Vg7?authuser=1#scrollTo=0udlGhp4COzC" class="research-proj-title">
-                        Sentiment Analysis of AI News Articles (Using LDA for topic Modelling )
-                    </a>
-                    <p>
-                        This is the first part of the news dataset analysis just to know what sector to look into for a deeper dive into the dataset.
-                        <br><br><b>Feburary 2024</b></br>
-                        <a href="https://colab.research.google.com/drive/16-C59W6RGPCj5try4FRtHz03OcoW6Vg7?authuser=1#scrollTo=0udlGhp4COzC">Colab</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets\images\energy_lstm.gif" />
-                    <a href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing" class="research-proj-title">
-                        Using LSTM for California Energy Price Prediction
-                    </a>
-                    <p>
-                        
-                        Utilize an LSTM network for forecasting PGE NP15's Day-Ahead Locational Marginal Pricing (DA_LMP),
-                        analyzing over 26,000 hourly data points from California's electricity load and gas prices for 2020 and 2023.
-                        Employing a Sequential LSTM model trained to minimize RMSE, the study achieves forecasts primarily within the $150 to $175 per MWh range.
-                        The model’s performance, characterized by its ability to identify price spikes, underscores the LSTM's effectiveness in navigating the complexities of energy market pricing.
-                        <br><br><b>March 2024</b></br>
-                        <a href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">Colab</a>
-                    </p>
-            </div>
-            <div style="clear: both;"></div>
-            <div>
-                <a href="" style="height: 12em;" class="research-thumb">
-                    <img width="320" height="200" src="assets/images/pca.gif" />
-                    <a href="https://docs.google.com/presentation/d/1QVbyq2CYZsH78iO8NKat1OZT8FASiNgC/edit?usp=sharing&ouid=117751680139828454883&rtpof=true&sd=true" class="research-proj-title">
-                        Premier League Performance Prediction 
-                    </a>
-                    <p>
-                        Using datasets on team and player performance, injuries, and managerial tenure, I applied models like linear regression, 
-                        stepwise regression, and principal component regression while displaying the findings using Tableu. Key findings include 
-                        Manchester City predicted as the season's top team, Mohamed Salah as the top scorer, and evidence confirming home advantage 
-                        in football. 
-                        <br><br><b>December 2022</b></br>
-                        <a href="https://drive.google.com/drive/folders/1f3DFkx5K_v0kJtYlUY0hcR4Rxmo5M9EC?usp=sharing">R-Studio</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                        <a href="https://docs.google.com/presentation/d/1QVbyq2CYZsH78iO8NKat1OZT8FASiNgC/edit?usp=sharing&ouid=117751680139828454883&rtpof=true&sd=true">Report</a>
-
-                    </p>
-            </div>
-        
+  <header class="hero">
+    <div class="shot">
+      <picture>
+        <source srcset="assets/site/avatar-480.webp" type="image/webp">
+        <img src="assets/site/avatar-480.jpg" alt="Chris D'Silva" width="480" height="480">
+      </picture>
     </div>
+    <div>
+      <h1>Chris D'Silva</h1>
+      <p class="tag">Validation Scientist — Equipment &amp; Site Qualification · <kbd>[[Cherry Hill, NJ]]</kbd></p>
+      <p class="lede">I keep aseptic manufacturing sites inspection-ready. VHP and autoclave cycle development, isolator qualification, temperature mapping, and the requalification schedules that hold it all together — from the protocol to the FDA audit response.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:chrisdsilva007@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg>Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/chrisdsilva07/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.7 8.75 22 10.7 22 14.1V21h-4v-6.1c0-1.5-.54-2.5-1.87-2.5-1.02 0-1.63.68-1.9 1.34-.1.24-.13.57-.13.9V21h-4V9z"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/ChrisD-7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a>
+        <a class="btn" href="assets/files/chris-dsilva-resume.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v14H6V2zm8 1.5V9h5.5L14 3.5zM8 13h8v1.6H8V13zm0 3.2h8v1.6H8v-1.6z"/></svg>Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Selected work</h2>
+    <p class="sub">Analytics and simulation projects from my graduate work, with the numbers that came out of them.</p>
+    <div class="grid">
+
+      <a class="card" href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">
+        <picture>
+          <source srcset="assets/site/kan-fraud.webp" type="image/webp">
+          <img src="assets/site/kan-fraud.jpg" alt="Kolmogorov–Arnold network classification output" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Fraud detection with Kolmogorov–Arnold Networks</span>
+          <span class="d">KAN against an MLP baseline on supply-chain fraud data — 99% test accuracy from a derived symbolic formula, with better interpretability.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/ChrisD-7/reddit_NLP">
+        <picture>
+          <source srcset="assets/site/reddit-nlp.webp" type="image/webp">
+          <img src="assets/site/reddit-nlp.jpg" alt="Topic clusters from the Rutgers and UPenn subreddit analysis" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Rutgers vs. UPenn subreddit analysis</span>
+          <span class="d">Feature engineering, classifier comparison, and grid-search tuning with Gemini embeddings; themes visualized through t-SNE and word clouds.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">
+        <picture>
+          <source srcset="assets/site/energy-lstm.webp" type="image/webp">
+          <img src="assets/site/energy-lstm.jpg" alt="Forecast against actual day-ahead energy prices" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">LSTM forecasting of California energy prices</span>
+          <span class="d">Day-ahead locational marginal pricing from 26,000+ hourly observations of load and gas price; strongest on price spikes.</span>
+          <span class="y">2024 · Colab</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/ChrisD-7/Chat-with-PDF">
+        <picture>
+          <source srcset="assets/site/chat-with-pdf.webp" type="image/webp">
+          <img src="assets/site/chat-with-pdf.jpg" alt="Chat interface answering questions from an uploaded PDF" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Chat-with-PDF on Gemini and FAISS</span>
+          <span class="d">Context-aware document Q&amp;A over a FAISS vector index — retrieval and generation wired into one interface.</span>
+          <span class="y">2024 · GitHub</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">
+        <picture>
+          <source srcset="assets/site/starbucks-arena.webp" type="image/webp">
+          <img src="assets/site/starbucks-arena.jpg" alt="Arena simulation model of a service queue" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Queue optimization by Arena simulation</span>
+          <span class="d">Modeled Rutgers' campus Starbucks with lognormal inter-arrival times; extra order-processing capacity cut beverage wait from 4.44 to 0.08 minutes.</span>
+          <span class="y">2023 · Report</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">
+        <picture>
+          <source srcset="assets/site/lidar-risk.webp" type="image/webp">
+          <img src="assets/site/lidar-risk.jpg" alt="Fault tree reliability model for a lidar system" width="640" height="400" loading="lazy" decoding="async">
+        </picture>
+        <div class="body">
+          <span class="t">Risk analysis for lidar failure in autonomous vehicles</span>
+          <span class="d">Fault tree and event tree analysis with Weibull reliability modeling — 11.66% system failure probability, laser emitter as the critical point.</span>
+          <span class="y">2022 · Report</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <p class="sub">Two roles at Hikma Pharmaceuticals. Open either one for the detail.</p>
+
+    <details open>
+      <summary>
+        <span class="s-t">Sr Scientist, Equipment Validation</span>
+        <span class="s-o">Hikma Pharmaceuticals · <kbd>[[Cherry Hill, NJ]]</kbd></span>
+        <span class="s-w"><kbd>[[Mon YYYY]]</kbd> – Present</span>
+      </summary>
+      <div class="pane">
+        <ul>
+          <li>Close requalifications for production lines against the equipment actually used in production.</li>
+          <li>Led a new-filter comparability study — pump flow rate and volumetric flux testing to qualify the replacement against the incumbent filter.</li>
+          <li>Developed filter flush recipes per PDA guidance, tuned to product density, viscosity, and surface tension; built WFI and IPA recipes to site requirements.</li>
+          <li>Qualifying the Rotzinger CPS 1900 Connected Packaging Serialization system: vendor requirements plus site-specific qualification, delivered through line integration, including audit trail and software checks.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Site Validation Engineer</span>
+        <span class="s-o">Hikma Pharmaceuticals, 503B Outsourcing Facility · <kbd>[[site]]</kbd></span>
+        <span class="s-w"><kbd>[[Mon YYYY]]</kbd> – <kbd>[[Mon YYYY]]</kbd></span>
+      </summary>
+      <div class="pane">
+        <ul>
+          <li><span class="g">Sterilization &amp; aseptic cycles.</span> VHP qualification — cycle development and load creation driven by business demand, with the operations team. Autoclave cycle development for Automatic Syringe Filler loads. Isolator qualification for production loads.</li>
+          <li><span class="g">Environmental &amp; thermal qualification.</span> Temperature mapping of stability chambers, refrigerators, incubators, vaults, warehouses, and large coolers. Open-door studies and requalifications to resolve incubator temperature deviations. Clean room HEPA filter requalification by airflow and particle counts, with patch tracking per site SOP. Qualified the site's particle counters and authored the SOPs and work instructions for them.</li>
+          <li><span class="g">Compliance &amp; inspection support.</span> FDA audit response — CAPAs, deviation closure, filter integrity tester verification studies, and pump pressure studies. Completed incomplete qualifications, CAPAs, and deviations to close the site out. Built and defended the site-wide requalification schedule against regulatory requirements, site SOPs, and operational need.</li>
+          <li><span class="g">Trending &amp; vendor qualification.</span> Annual trend reports for temperature-, differential-pressure-, and humidity-monitored areas, against product storage guidelines and per-room requirements. Qualified the WFI testing vendor, plus TOC and conductivity meters, Milli-Q water systems, and lab instrumentation (scales, pH meters).</li>
+          <li><span class="g">Cross-functional protocols.</span> Authored the Smart Hood System qualification protocol as an FDA audit response, coordinating engineering, microbiology, compounding, and external contractors — including continuous environmental monitoring of differential pressure, airflow, and particle counts.</li>
+          <li><span class="g">Decommissioning.</span> Supported site closure — archival of qualification documents and protocols under change control, and closure of the affected areas and equipment.</li>
+        </ul>
+        <p class="s-o" style="margin:.9rem 0 0">Documentation: Veeva Vault — qualification and controlled document management.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Career timeline</span>
+        <span class="s-o">How I got here</span>
+      </summary>
+      <div class="pane">
+        <ul class="tl">
+          <li><span class="w"><kbd>[[Month Year]]</kbd></span>Promoted to Sr Scientist, Equipment Validation at Hikma's <kbd>[[Cherry Hill, NJ]]</kbd> site.</li>
+          <li><span class="w"><kbd>[[Month Year]]</kbd></span>Filter comparability study for a new filter introduction, and flush-recipe development per PDA guidance.</li>
+          <li><span class="w"><kbd>[[Month Year]]</kbd></span>Supported site decommissioning and qualification document archival under change control.</li>
+          <li><span class="w"><kbd>[[Month Year]]</kbd></span>Authored the Smart Hood System qualification protocol as an FDA audit response, with continuous environmental monitoring.</li>
+          <li><span class="w"><kbd>[[Month Year]]</kbd></span>Joined Hikma's 503B outsourcing facility as Site Validation Engineer — VHP and autoclave cycle development.</li>
+          <li><span class="w">Feb 2024</span>Inducted into Alpha Pi Mu, the Industrial Engineering honor society.</li>
+          <li><span class="w">Dec 2023</span>Exchange semester at Princeton University under Prof. John Mulvey.</li>
+          <li><span class="w">May 2023</span>Graduate engineering intern at Hikma Pharmaceuticals.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>I work between engineering and regulatory evidence: I write the protocols, run the studies, close the CAPAs and deviations, and then defend the documents when FDA comes in. Sterile and 503B compounding operations are unforgiving about detail, which is the part I like.</p>
+    <p>I hold a Master of Science in Industrial and Systems Engineering from Rutgers University and a Bachelor of Engineering in Mechanical Engineering from the University of Mumbai.</p>
+
+    <details>
+      <summary>
+        <span class="s-t">Skills</span>
+        <span class="s-o">Validation, compliance, and document systems</span>
+      </summary>
+      <div class="pane">
+        <ul class="chips">
+          <li>VHP cycle development</li>
+          <li>Autoclave cycles</li>
+          <li>Isolator qualification</li>
+          <li>Temperature mapping</li>
+          <li>Requalification scheduling</li>
+          <li>FDA audit response</li>
+          <li>CAPA &amp; deviation closure</li>
+          <li>Change control</li>
+          <li>Filter comparability &amp; flush recipes</li>
+          <li>Serialization (Track &amp; Trace)</li>
+          <li>Vendor qualification</li>
+          <li>Veeva Vault</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span class="s-t">Education</span>
+        <span class="s-o">Rutgers · Princeton · Mumbai</span>
+      </summary>
+      <div class="pane">
+        <div class="edu"><span><strong>Rutgers University</strong> — M.S. Industrial &amp; Systems Engineering</span><span class="s">2022 – 2024</span></div>
+        <div class="edu"><span><strong>Princeton University</strong> — ORF 535, Financial Risk &amp; Wealth Management</span><span class="s">2023</span></div>
+        <div class="edu"><span><strong>University of Mumbai</strong> — B.E. Mechanical Engineering</span><span class="s">2016 – 2020</span></div>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:chrisdsilva007@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/chrisdsilva07/">LinkedIn</a>
+      <a href="https://github.com/ChrisD-7">GitHub</a>
+      <a href="assets/files/chris-dsilva-resume.pdf">Résumé</a>
+      <a href="https://twitter.com/chrisdsilvaOO7">Twitter</a>
+    </div>
+    <p style="margin:0">Last updated <kbd>[[YYYY-MM]]</kbd>. The linked résumé PDF is still the <kbd>[[Jul 2024]]</kbd> version.</p>
+  </div>
+</footer>
+
 </body>
 </html>
