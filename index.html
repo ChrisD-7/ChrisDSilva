@@ -103,7 +103,8 @@
   .bar nav a.on::after, .bar nav a:hover::after { right: 0; }
   @media (max-width: 42rem) {
     .bar nav { gap: .95rem; font-size: .84rem; }
-    .bar nav a[href="#toolbox"] { display: none; }
+    .bar nav a[href="#toolbox"],
+    .bar nav a[href="#off"] { display: none; }
     .mark { font-size: 1.05rem; white-space: nowrap; }
   }
 
@@ -229,6 +230,7 @@
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
       <a href="#toolbox">Toolbox</a>
+      <a href="#off">Off the clock</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="tgl" id="tgl" type="button" aria-label="Switch between light and dark theme" aria-pressed="false" title="Light / dark theme">
@@ -279,6 +281,7 @@
       <div class="pane">
         <p>I work between engineering and regulatory evidence: I write the protocols, run the studies, close the CAPAs and deviations, and then defend the documents when FDA comes in. Sterile and 503B compounding operations are unforgiving about detail, which is the part I like.</p>
         <p>Before this I was the site validation engineer at Hikma's 503B outsourcing facility, and before that a graduate engineering intern there while I finished my M.S. in Industrial and Systems Engineering at Rutgers.</p>
+        <p>Off the clock I am usually printing something, fixing something, or halfway through a side quest.</p>
       </div>
     </details>
   </section>
@@ -468,6 +471,24 @@
         </div>
       </div>
     </details>
+  </section>
+
+  <section id="off" aria-labelledby="off-h">
+    <div class="head"><span class="num">05</span><h2 id="off-h" class="rv">Off the clock</h2></div>
+    <div class="pillars">
+      <div class="pillar rv">
+        <h3>3D printing</h3>
+        <p>Mostly functional prints — brackets, jigs, mounts, and replacements for parts nobody makes anymore. I do the CAD, then print and re-print until it actually fits.</p>
+      </div>
+      <div class="pillar rv">
+        <h3>Fixing things</h3>
+        <p>If it is broken I would rather open it than replace it. Appliances, electronics, furniture — whatever the house throws up that week.</p>
+      </div>
+      <div class="pillar rv">
+        <h3>Side quests</h3>
+        <p>Small tools, scripts and datasets that started as a "why does this not exist yet". Most of them end up useful, none of them end up finished.</p>
+      </div>
+    </div>
   </section>
 
 </main>
