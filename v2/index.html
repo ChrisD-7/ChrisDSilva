@@ -157,6 +157,9 @@
   .card .d { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 0; }
   .card .y { color: var(--muted); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; margin-top: auto; padding-top: .6rem; }
   .card:hover .t { color: var(--accent); }
+  .card:not(a) { cursor: default; }
+  .card:not(a):hover img { transform: none; filter: saturate(.88); }
+  .card:not(a):hover .t { color: inherit; }
 
   /* compact rows */
   .rows { border-top: 1px solid var(--hair); }
@@ -375,6 +378,15 @@
     <p class="lede rv" style="margin-bottom:2rem;font-size:1rem">Applied machine learning, regulatory graph analytics, and system reliability modelling.</p>
 
     <div class="grid">
+      <div class="card rv">
+        <div class="frame"><picture>
+          <source srcset="../assets/site/sop-vision.webp" type="image/webp">
+          <img src="../assets/site/sop-vision.jpg" alt="Tiered vision pipeline: frame filtering, surface-coverage segmentation, and a generated audit log" width="640" height="400" loading="lazy" decoding="async">
+        </picture></div>
+        <span class="t">Hierarchical vision pipeline for cleanroom SOP auditing</span>
+        <span class="d">Verifies aseptic operator technique — wipe coverage and door dwell times — without running a large model on every frame. Lightweight YOLO triggers discard empty frames and pass candidate clips to SAM 2 for segmentation and coverage measurement; those physical metrics are fed to Qwen-VL to judge SOP compliance and write structured audit logs, so the model reports measured values instead of inferring them. Footage is indexed with vector embeddings for natural-language compliance search.</span>
+        <span class="y">In development · Internal project</span>
+      </div>
 <a class="card rv" href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">
         <div class="frame"><picture>
           <source srcset="../assets/site/kan-fraud.webp" type="image/webp">
