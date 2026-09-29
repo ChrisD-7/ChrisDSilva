@@ -190,8 +190,8 @@
   }
   .toolcat ul { list-style: none; margin: 0; padding: 0; }
   .toolcat li { font-size: .95rem; line-height: 1.75; }
+  .toolcat li.note { color: var(--muted); font-size: .9rem; }
   @media (max-width: 40rem) { .toolgrid { grid-template-columns: 1fr; gap: 1.75rem; } }
-  .chips li:hover { border-color: var(--accent); color: var(--ink); }
 
   /* details */
   details { margin-top: 1rem; }
@@ -453,36 +453,40 @@
 
     <div class="toolgrid rv">
       <div class="toolcat">
+        <h3>Validation &amp; GMP</h3>
+        <ul>
+          <li>VHP &amp; autoclave cycles</li>
+          <li>Isolator &amp; ISO 5/7 cleanrooms</li>
+          <li>Thermal mapping</li>
+          <li>CAPA · change control</li>
+          <li>Veeva Vault · Blue Mountain</li>
+        </ul>
+      </div>
+      <div class="toolcat">
+        <h3>Instrumentation</h3>
+        <ul>
+          <li>Thermocouple mapping</li>
+          <li>Airborne particle counters</li>
+          <li>Differential pressure</li>
+          <li>Membrane flux testing</li>
+        </ul>
+      </div>
+      <div class="toolcat">
         <h3>Design &amp; simulation</h3>
         <ul>
           <li>SolidWorks · AutoCAD</li>
           <li>Ansys (FEA / basic CFD)</li>
-          <li>Rockwell Arena · FlexSim</li>
+          <li>Arena · FlexSim</li>
+          <li class="note">3D printing: one documented build</li>
         </ul>
       </div>
       <div class="toolcat">
-        <h3>Computing &amp; data</h3>
+        <h3>Data &amp; ML</h3>
         <ul>
-          <li>Python (NumPy, SciPy, PyTorch) · MATLAB</li>
-          <li>R · SQL · Tableau · Power BI</li>
-        </ul>
-      </div>
-      <div class="toolcat">
-        <h3>Physical instrumentation</h3>
-        <ul>
-          <li>Multi-point thermal mapping</li>
-          <li>Airborne particle counters</li>
-          <li>Differential pressure gauges</li>
-          <li>Membrane flux &amp; flow decay</li>
-        </ul>
-      </div>
-      <div class="toolcat">
-        <h3>Aseptic systems &amp; compliance</h3>
-        <ul>
-          <li>VHP decontamination · Autoclaves</li>
-          <li>Isolator qualification · 503B / cGMP</li>
-          <li>PDA Technical Reports · Serialization</li>
-          <li>Lean Six Sigma Green Belt</li>
+          <li>Python (NumPy, SciPy, PyTorch)</li>
+          <li>R · MATLAB · SQL</li>
+          <li>Graph modelling</li>
+          <li>Tableau · Power BI</li>
         </ul>
       </div>
     </div>
