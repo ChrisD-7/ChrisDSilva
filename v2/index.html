@@ -378,6 +378,7 @@
     <p class="lede rv" style="margin-bottom:2rem;font-size:1rem">Applied machine learning, regulatory graph analytics, and system reliability modelling.</p>
 
     <div class="grid">
+
       <a class="card rv" href="https://fda483.org">
         <div class="frame"><picture>
           <source srcset="../assets/site/fda483-graph.webp" type="image/webp">
@@ -392,9 +393,11 @@
           <img src="../assets/site/sop-vision.jpg" alt="Tiered vision pipeline: frame filtering, surface-coverage segmentation, and a generated audit log" width="640" height="400" loading="lazy" decoding="async">
         </picture></div>
         <span class="t">Hierarchical vision pipeline for video review</span>
-        <span class="d">Verifies aseptic operator technique — wipe coverage and door dwell times — without running a large model on every frame. Lightweight YOLO triggers discard empty frames and pass candidate clips to SAM 2 for segmentation and coverage measurement; those physical metrics are fed to Qwen-VL to judge SOP compliance and write structured audit logs, so the model reports measured values instead of inferring them. Footage is indexed with vector embeddings for natural-language compliance search.</span>
+        <span class="d">Building a natural-language search tool over recorded video — tiered vision models discard empty frames, measure what happened, and write the audit record, so the language model reports measured values rather than inferring them.</span>
         <span class="y">In development · Internal project</span>
-      </div>      <a class="card rv" href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">
+      </div>
+
+      <a class="card rv" href="https://github.com/ChrisD-7/Fraud-Detection-in-Supply-Chains-with-Kolmogorov-Arnold-Networks">
         <div class="frame"><picture>
           <source srcset="../assets/site/kan-fraud.webp" type="image/webp">
           <img src="../assets/site/kan-fraud.jpg" alt="Kolmogorov–Arnold network classification output" width="640" height="400" loading="lazy" decoding="async">
@@ -402,7 +405,9 @@
         <span class="t">Fraud detection with Kolmogorov–Arnold Networks</span>
         <span class="d">KAN against an MLP baseline on supply-chain fraud data — the 99% figure was target leakage; rebuilt and re-measured: ROC-AUC 0.88, with a single column (Type) carrying the signal.</span>
         <span class="y">2024 · GitHub</span>
-      </a>      <a class="card rv" href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">
+      </a>
+
+      <a class="card rv" href="https://colab.research.google.com/drive/15smebSMqLlasVcfZ-iT7i0eoe-Ya96lv?usp=sharing">
         <div class="frame"><picture>
           <source srcset="../assets/site/energy-lstm.webp" type="image/webp">
           <img src="../assets/site/energy-lstm.jpg" alt="Forecast against actual day-ahead energy prices" width="640" height="400" loading="lazy" decoding="async">
@@ -410,7 +415,9 @@
         <span class="t">LSTM forecasting of California energy prices</span>
         <span class="d">Day-ahead locational marginal pricing from 26,000+ hourly observations of load and gas price; strongest on price spikes.</span>
         <span class="y">2024 · Colab</span>
-      </a>      <a class="card rv" href="https://github.com/ChrisD-7/Chat-with-PDF">
+      </a>
+
+      <a class="card rv" href="https://github.com/ChrisD-7/Chat-with-PDF">
         <div class="frame"><picture>
           <source srcset="../assets/site/chat-with-pdf.webp" type="image/webp">
           <img src="../assets/site/chat-with-pdf.jpg" alt="Chat interface answering questions from an uploaded PDF" width="640" height="400" loading="lazy" decoding="async">
@@ -418,7 +425,9 @@
         <span class="t">Chat-with-PDF on Gemini and FAISS</span>
         <span class="d">Context-aware document Q&amp;A over a FAISS vector index — retrieval and generation wired into one interface.</span>
         <span class="y">2024 · GitHub</span>
-      </a>      <a class="card rv" href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">
+      </a>
+
+      <a class="card rv" href="https://drive.google.com/file/d/1wfK4p9qCKhi0UGbTf14v0yKSKmXtCZub/view?usp=sharing">
         <div class="frame"><picture>
           <source srcset="../assets/site/starbucks-arena.webp" type="image/webp">
           <img src="../assets/site/starbucks-arena.jpg" alt="Arena simulation model of a service queue" width="640" height="400" loading="lazy" decoding="async">
@@ -426,7 +435,9 @@
         <span class="t">Queue optimization by Arena simulation</span>
         <span class="d">Modeled Rutgers' campus Starbucks with lognormal inter-arrival times; extra order-processing capacity cut beverage wait from 4.44 to 0.08 minutes.</span>
         <span class="y">2023 · Report</span>
-      </a>      <a class="card rv" href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1">
+      </a>
+
+      <a class="card rv" href="https://colab.research.google.com/drive/1p3rkfgSLyiWSkOTSuc8TgLOEzcKx46XX?authuser=1">
         <div class="frame"><picture>
           <source srcset="../assets/site/condo-monte-carlo.webp" type="image/webp">
           <img src="../assets/site/condo-monte-carlo.jpg" alt="Monte Carlo projection of savings growth against investment allocations" width="640" height="400" loading="lazy" decoding="async">
@@ -434,7 +445,9 @@
         <span class="t">Portfolio strategy for a condo purchase goal</span>
         <span class="d">Monte Carlo simulation of a $500k down payment toward a $1.5M condo — compared 10-year SPY/TLT allocations at a 25% capital gains rate across 5-, 7- and 10-year horizons.</span>
         <span class="y">2023 · Colab</span>
-      </a>      <a class="card rv" href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing">
+      </a>
+
+      <a class="card rv" href="https://colab.research.google.com/drive/1vs2IThr_u1YbnPEwRmuDIzhQs3kR_31E?usp=sharing">
         <div class="frame"><picture>
           <source srcset="../assets/site/solar-canopy.webp" type="image/webp">
           <img src="../assets/site/solar-canopy.jpg" alt="Monte Carlo cost distribution for a solar canopy project" width="640" height="400" loading="lazy" decoding="async">
@@ -442,7 +455,9 @@
         <span class="t">Solar canopy project proposal</span>
         <span class="d">Monte Carlo cost modeling with 5th and 90th percentile ranges, with recommendations drawn from NPV, IRR and present worth — including tax and social factors.</span>
         <span class="y">2023 · Colab</span>
-      </a>      <a class="card rv" href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">
+      </a>
+
+      <a class="card rv" href="https://drive.google.com/file/d/1-yNLgyN6adJx9g5bVedCzPqWIsOQBbBi/view?usp=sharing">
         <div class="frame"><picture>
           <source srcset="../assets/site/lidar-risk.webp" type="image/webp">
           <img src="../assets/site/lidar-risk.jpg" alt="Fault tree reliability model for a lidar system" width="640" height="400" loading="lazy" decoding="async">
