@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# /classic/ and /v2/ are noindex archives/variants and are excluded from the sitemap
+Sitemap: https://chrisd-7.github.io/ChrisDSilva/sitemap.xml
