@@ -151,16 +151,22 @@
   .pillar p { color: var(--muted); font-size: .95rem; margin: 0; }
 
   /* timeline */
-  .job { display: grid; grid-template-columns: 12.5rem 1fr; gap: 2rem; padding: 1.75rem 0; border-top: 1px solid var(--hair); }
+  .job { display: grid; grid-template-columns: 1fr auto; gap: 2rem; padding: 1.75rem 0; border-top: 1px solid var(--hair); }
   .job:first-of-type { border-top: 0; padding-top: 0; }
   .job .when { font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .job > div:first-child { order: 2; text-align: right; }
+  .job > div:last-child { order: 1; }
   .job .org { color: var(--muted); font-size: .95rem; margin: .15rem 0 .9rem; }
   .job ul { margin: 0; padding-left: 1.05rem; }
   .job li { margin-bottom: .45rem; }
   .job li::marker { color: var(--muted); }
   .job li:last-child { margin-bottom: 0; }
   .job .g { font-weight: 600; }
-  @media (max-width: 48rem) { .job { grid-template-columns: 1fr; gap: .5rem; } }
+  @media (max-width: 48rem) {
+    .job { grid-template-columns: 1fr; gap: .5rem; }
+    .job > div:first-child { order: 1; text-align: left; }
+    .job > div:last-child { order: 2; }
+  }
 
   /* work grid */
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 1.25rem; }
