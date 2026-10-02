@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-# /classic/ and /v2/ are noindex archives/variants and are excluded from the sitemap
+# /classic/ and /v1/ are retired versions kept for reference and marked noindex
+# /v2/ redirects to the root
 Sitemap: https://chrisd-7.github.io/ChrisDSilva/sitemap.xml
